@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Fake Trello that is Fake</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row formRow">
+            <!-- <p>Top row</p> -->
+            <div class="column">
+                <!-- Create a card -->
+                <form id="cardForm">
+                    <h1>Create Card</h1>
+                    <label for="cardTitle">Card Title:</label>
+                    <input type="text" name="cardTitle" id="cardTitle" />
+                    <br />
+                    <label for="cardContent">Card Description:</label>
+                    <input type="text" name="cardContent" id="cardContent" />
+                    <br />
+                    <button id="submitButton" type="submit"> Submit </button>
+                </form>
+            </div>
+            <div class="column">
+                <!-- Preview the card -->
+                <!-- div#cardPreview.trelloCard -->
+                <div id="cardPreview" class="trelloCard" draggable="true">
+                    <h3 class="cardDisplay-title">
+                        Card Title
+                    </h3>
+                    <p class="cardDisplay-content">
+                        Write a description
+                    </p>
+                </div>
+            </div>
+            <div class="column">
+                <!-- form to create columns -->
+                <form id="columnForm">
+                    <h1>
+                        Create a column:
+                    </h1>
+                    <label for="columnTitle">Column title:</label>
+                    <input type="text" name="columnTitle" id="columnTitle">
+                    <br />
+                    <button id="columnSubmitButton" type="submit"> Submit </button>
+                </form>
+            </div>
+        </div>
+
+        <div id="dataDisplayRow" class="row displayRow">
+            <!-- card display with drag and drop -->
+            <!-- <p>Bot row</p> -->
+        </div>
+
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

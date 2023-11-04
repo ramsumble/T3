@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #444658;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* row will be as wide as display */
+.row {
+    width: 100dvw;
+    padding: 4dvw;
+}
+
+.formRow {
+    display: flex;
+    margin: 0;
+    height: 15dvh;
+}
+
+.displayRow {
+    margin: 0;
+    display: flex;
+    height: 70dvh;
+    padding: 2%;
+}
+
+/* all columns in the formRow will have a default size and space */
+.formRow > .column {
+    width: 50dvw;
+    padding: 1dvw;
+    margin: 0;
+}
+
+.trelloColumn {
+    width: 33%;
+    background-color: grey;
+    min-height: 80%;
+    height: max-content;
+    margin: 4%;
+}
+
+.trelloCard {
+    background-color: coral;
+    width: 90%;
+    height: 10dvh;
+    text-align: center;
+    margin: 0;
+}
+
+#cardPreview {
+    background-color: wheat;
+}
+
+.trelloColumn > .trelloCard {
+    margin: 5%;
+}
