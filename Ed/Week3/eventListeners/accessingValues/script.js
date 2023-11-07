@@ -15,7 +15,12 @@ function challengeOne() {
 }
 
 function challengeTwo() {
+    document.getElementById('change-theme').addEventListener('click', function(event) {
+        let toggleThemes = document.getElementById('challenge-two');
+        toggleThemes.classList.toggle('darkmode');
+        console.log(toggleThemes)
 
+    });
 }
 
 function challengeThree() {
