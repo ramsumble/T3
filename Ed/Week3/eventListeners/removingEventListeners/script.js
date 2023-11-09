@@ -22,11 +22,19 @@ function challengeOne() {
 
 function challengeTwo() {
     function changeValue(event) {
-        // This is the callback function for the event handler
-        // It should either increment the value, decrement the value,
-        // or stop changing the value in the <p> based on the button that is clicked
+        // increase or decrease by 1 with each click or disable them
+        let buttonCounter = document.getElementById("counter-two");
+        let currentValue = parseInt(buttonCounter.innerText);
 
+        currentValue += event;
+        buttonCounter.innerText = currentValue;
+        
     }
+
+    let buttons = document.getElementsByClassName("challenge-two");
+    
+    
+
     // Challenge 2: Use the event target to determine the value on the button
     // that triggered the click event. Add that value to the current value
     // in the paragraph and update what is shown on the page.
