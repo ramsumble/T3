@@ -1,11 +1,11 @@
 
-async function getRandomPokemon() {
+async function getRandomPokemonAsync() {
     let id = Math.floor(Math.random() * 1016) + 1;
     let response = await fetch(API_BASE_URL + id); 
     let data =  await response.json();
     console.log(data.name)
 
-    
+
     let pkmName = document.getElementById("pokemonName");
     let pkmImage = document.getElementById("pokemonImage");
 
