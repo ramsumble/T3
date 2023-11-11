@@ -6,9 +6,9 @@ downloadPokemonPicture().then(savedFileOutput => {
     console.log(error);
 }) 
 
-async function exampleDownload() {
-    let savedFileOutput = await downloadPokemonPicture();
-    console.log("new image is saved to: " + savedFileOutput)
-}
+// async function exampleDownload() {
+//     let savedFileOutput = await downloadPokemonPicture();
+//     console.log("new image is saved to: " + savedFileOutput)
+// }
 
-exampleDownload();
+// exampleDownload();
