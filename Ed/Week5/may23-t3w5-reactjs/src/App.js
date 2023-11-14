@@ -1,23 +1,20 @@
 // import logo from './logo.svg';
+import FruitList from './FruitList';
+import Title from './Title';
 import './App.css';
+import Footer from './Footer';
 
-let someFruit = [
-  "mangoes",
-  "more mangoes",
-  "yeah just mangoes"
-]
 
 function App() {
   return (
     <div className="App">
-      <h1>The fruit app!</h1>
+      <Title /> 
       <ul>
         {
-          someFruit.map((fruit => {
-            return <li>{fruit}</li>
-          }))
+          <FruitList />
         }
       </ul>
+      <Footer />
     </div>
   );
 }
