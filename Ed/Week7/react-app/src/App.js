@@ -1,6 +1,7 @@
 import { useLocalStorage } from 'react-use';
 import './App.css';
 import { useEffect, useState } from 'react';
+import { BrowserRouter, NavLink, Routes } from 'react-router-dom';
 
 function App() {
   const [storedMessage, setStoredMessage] = useLocalStorage('message', "");
@@ -30,6 +31,19 @@ function App() {
   return (
     <div className="App">
       {message && <h1>{message}</h1>}
+      <BrowserRouter>
+        <ul>
+          <li>
+            <NavLink to='/1'>Page 1</NavLink>
+          </li>
+          <li>
+            <NavLink to='/2'>Page 2</NavLink>
+          </li>
+        </ul>
+        <Routes>
+
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
