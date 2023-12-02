@@ -2,7 +2,7 @@ import { createContext, useState} from "react"
 
 
 const defaultUserData = {
-    jwt: ""
+    jwt: "something"
 }
 
 export const UserContext = createContext(defaultUserData);
