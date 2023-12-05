@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ApiProvider } from './context/ApiProvider';
+import { PokemonDataProvider } from './context/PokemonDataProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    
+    <ApiProvider>
+      <PokemonDataProvider>
+        <App />
+      </PokemonDataProvider>
+    </ApiProvider>
+    
   </React.StrictMode>
 );
 
