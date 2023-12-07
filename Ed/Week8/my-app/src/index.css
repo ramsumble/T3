@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+#pokemonTeam {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.pokemonInfoCard {
+  max-width: 30dvw;
+  min-width: 15dvw;
+}
+
+.pokemonInfoCard > div > img {
+  max-width: 40%;
+}
