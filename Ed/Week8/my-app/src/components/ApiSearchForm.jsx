@@ -1,17 +1,22 @@
+// Form component 
+// grabs a Pokemon name from user input
+// makes a fetch request on submit
+// returns data 
+
 import { useContext, useState } from "react";
 import { ApiContext } from "../context/ApiProvider";
 import { PokemonTeamContext } from "../context/PokemonDataProvider";
 
 export function ApiSearchForm(){
-	let apiUrlBase = useContext(ApiContext);
+	let {url} = useContext(ApiContext);
+	let pokemonDataArray = useContext(PokemonTeamContext);
 	let [searchData, setSearchData] = useState("pikachu");
-    let pokemonDataArray = useContext(PokemonTeamContext);
 
 	const searchForPokemon = async () => {
 		// console.log(`API URL is: ${apiUrlBase}`);
-		let response = await fetch(apiUrlBase + "pokemon/" + searchData);
-        let data = await response.json();
-        pokemonDataArray.push(data);
+		let response = await fetch(url + "pokemon/" + searchData);
+		let data = await response.json();
+		pokemonDataArray.push(data);
 	}
 
 	return(
